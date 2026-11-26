@@ -1,0 +1,590 @@
+ Image vk-p2-dubovoy-check-stream Building 
+ Image vk-p2-dubovoy-check-batch Building 
+ Image vk-p2-dubovoy-check-ingest Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.91kB 0.0s done
+#1 DONE 0.0s
+
+#2 [ingest internal] load build definition from Dockerfile
+#2 transferring dockerfile: 243B done
+#2 DONE 0.0s
+
+#3 [stream internal] load metadata for docker.io/library/python:3.11.10-slim
+#3 DONE 0.4s
+
+#4 [ingest internal] load .dockerignore
+#4 transferring context: 79B done
+#4 DONE 0.0s
+
+#5 [stream internal] load build context
+#5 transferring context: 93B done
+#5 DONE 0.0s
+
+#6 [ingest 1/5] FROM docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e
+#6 resolve docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e 0.1s done
+#6 DONE 0.1s
+
+#6 [stream 1/5] FROM docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e
+#6 resolve docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e 0.1s done
+#6 DONE 0.1s
+
+#7 [ingest 2/5] WORKDIR /app
+#7 CACHED
+
+#8 [ingest 3/5] COPY requirements.txt .
+#8 CACHED
+
+#9 [ingest 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [ingest 5/5] COPY app.py schema.sql ./
+#10 CACHED
+
+#11 [stream] exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:b525c21ee1a638945229f0eea2ac34166c175c5f288e5a1c8f4eaca797d4c03c 0.0s done
+#11 exporting config sha256:4da4a41cc8df860a7bcaa2fdd2e50dd2e0e723181b00af6364ee03235e9dd856 0.0s done
+#11 exporting attestation manifest sha256:6d93af1b2a84a1c1ea213a525e195f4107850ab07281a8910df07dfdda22824f
+#11 exporting attestation manifest sha256:6d93af1b2a84a1c1ea213a525e195f4107850ab07281a8910df07dfdda22824f 0.2s done
+#11 exporting manifest list sha256:075a458fca3ce3861a74715560d3ff91170c4abfa71bb6251ed1fa77d18231e5
+#11 exporting manifest list sha256:075a458fca3ce3861a74715560d3ff91170c4abfa71bb6251ed1fa77d18231e5 0.1s done
+#11 naming to docker.io/library/vk-p2-dubovoy-check-stream:latest
+#11 naming to docker.io/library/vk-p2-dubovoy-check-stream:latest 0.0s done
+#11 unpacking to docker.io/library/vk-p2-dubovoy-check-stream:latest 0.0s done
+#11 DONE 0.6s
+
+#12 [ingest] exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:6bce4f8bb55732b4555bdd7c8b4f374bc76e2d88ce5e16e21165b1ef6841224a 0.0s done
+#12 exporting config sha256:23660232478aad8fa8751881fa23fda0cfa4e3b11cdc536fcf0ef8d4ec8307ff 0.0s done
+#12 exporting attestation manifest sha256:aca21bd0aa0df7c37544e91d1f0cf9261d0a75e88712c2a9015cdacd0db5ebbc 0.2s done
+#12 exporting manifest list sha256:4559b6557616a5d57146edb169b3dd33ccfb5a653f416a43b0dd1aeb43503bda 0.1s done
+#12 naming to docker.io/library/vk-p2-dubovoy-check-ingest:latest 0.0s done
+#12 unpacking to docker.io/library/vk-p2-dubovoy-check-ingest:latest 0.0s done
+#12 DONE 0.6s
+
+#13 [batch] exporting to image
+#13 exporting layers done
+#13 exporting manifest sha256:c20f58a6ebff523259e10b5de60a9f0b6ebe9f0e4bee6991d93cca49b6984ec9 0.0s done
+#13 exporting config sha256:6f1346322878b27ce6c4ccea19530f4f91ced0c5fbecad5f690839b4383e7c01 0.0s done
+#13 exporting attestation manifest sha256:fb1ef2669a148ffd250c3f134859f27eaaaff3133f0735090826cfaf6272a199 0.2s done
+#13 exporting manifest list sha256:69128ac5156a8a81253220bca7ebb5a4058f8bd1a70f11dc8797193ebf43718a 0.1s done
+#13 naming to docker.io/library/vk-p2-dubovoy-check-batch:latest 0.0s done
+#13 unpacking to docker.io/library/vk-p2-dubovoy-check-batch:latest 0.0s done
+#13 DONE 0.6s
+
+#14 [stream] resolving provenance for metadata file
+#14 ...
+
+#15 [batch] resolving provenance for metadata file
+#15 DONE 2.1s
+
+#14 [stream] resolving provenance for metadata file
+#14 DONE 2.2s
+
+#16 [ingest] resolving provenance for metadata file
+#16 DONE 0.0s
+ Image vk-p2-dubovoy-check-batch Built 
+ Image vk-p2-dubovoy-check-ingest Built 
+ Image vk-p2-dubovoy-check-stream Built 
+ Container vk-p2-dubovoy-check-postgres-1 Running 
+ Container vk-p2-dubovoy-check-batch-1 Recreate 
+ Container vk-p2-dubovoy-check-ingest-1 Recreate 
+ Container vk-p2-dubovoy-check-stream-1 Recreate 
+ Container vk-p2-dubovoy-check-ingest-1 Recreated 
+ Container vk-p2-dubovoy-check-batch-1 Recreated 
+ Container vk-p2-dubovoy-check-stream-1 Recreated 
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-ingest-1 Starting 
+ Container vk-p2-dubovoy-check-batch-1 Starting 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-stream-1 Starting 
+ Container vk-p2-dubovoy-check-batch-1 Started 
+ Container vk-p2-dubovoy-check-stream-1 Started 
+ Container vk-p2-dubovoy-check-ingest-1 Started 
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-ingest-1 Waiting 
+ Container vk-p2-dubovoy-check-stream-1 Waiting 
+ Container vk-p2-dubovoy-check-batch-1 Waiting 
+ Container vk-p2-dubovoy-check-stream-1 Healthy 
+ Container vk-p2-dubovoy-check-batch-1 Healthy 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-ingest-1 Healthy 
+ Image vk-p2-dubovoy-check-ingest Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 695B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile:
+#2 transferring dockerfile: 243B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11.10-slim
+#3 DONE 0.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 79B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 93B done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e
+#6 resolve docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e 0.1s done
+#6 DONE 0.1s
+
+#7 [2/5] WORKDIR /app
+#7 CACHED
+
+#8 [3/5] COPY requirements.txt .
+#8 CACHED
+
+#9 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [5/5] COPY app.py schema.sql ./
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:6bce4f8bb55732b4555bdd7c8b4f374bc76e2d88ce5e16e21165b1ef6841224a done
+#11 exporting config sha256:23660232478aad8fa8751881fa23fda0cfa4e3b11cdc536fcf0ef8d4ec8307ff done
+#11 exporting attestation manifest sha256:d154bd56507bec2f75eec0116212729af4a4d7f027892fb8213eee1761a1f615 0.1s done
+#11 exporting manifest list sha256:0901fad1f0cc5e9daed0cc736e9366af6107bad46f04b271ecfc0d594b4d9c7f
+#11 exporting manifest list sha256:0901fad1f0cc5e9daed0cc736e9366af6107bad46f04b271ecfc0d594b4d9c7f 0.0s done
+#11 naming to docker.io/library/vk-p2-dubovoy-check-ingest:latest done
+#11 unpacking to docker.io/library/vk-p2-dubovoy-check-ingest:latest 0.0s done
+#11 DONE 0.3s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image vk-p2-dubovoy-check-ingest Built 
+ Container vk-p2-dubovoy-check-postgres-1 Running 
+ Container vk-p2-dubovoy-check-ingest-1 Recreate 
+ Container vk-p2-dubovoy-check-ingest-1 Recreated 
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-ingest-1 Starting 
+ Container vk-p2-dubovoy-check-ingest-1 Started 
+ Image vk-p2-dubovoy-check-demo Building 
+ Image vk-p2-dubovoy-check-ingest Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.28kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 243B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11.10-slim
+#3 DONE 0.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 79B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 93B done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e
+#6 resolve docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e 0.1s done
+#6 DONE 0.1s
+
+#7 [2/5] WORKDIR /app
+#7 CACHED
+
+#8 [3/5] COPY requirements.txt .
+#8 CACHED
+
+#9 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [5/5] COPY app.py schema.sql ./
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:d5f6514da103aa691538be2fee2fde984e784b1e4c47044d40ba5aeb0df2cc27 0.0s done
+#11 exporting config sha256:9aca70e2c4652f90e8df9837f15966c7be32243a93a35255126f1f46c36d90a4 0.0s done
+#11 exporting attestation manifest sha256:c5ff2c9f626cbf0c58ec2976c9a4b8e40b95a04da32ad7ba97631764299e5cbe
+#11 exporting attestation manifest sha256:c5ff2c9f626cbf0c58ec2976c9a4b8e40b95a04da32ad7ba97631764299e5cbe 0.1s done
+#11 exporting manifest list sha256:f3d49f3b995fdcdd5c6d7e55118c093714e4395c1fb5e923845502bc29ed32b4 0.0s done
+#11 naming to docker.io/library/vk-p2-dubovoy-check-demo:latest
+#11 naming to docker.io/library/vk-p2-dubovoy-check-demo:latest done
+#11 unpacking to docker.io/library/vk-p2-dubovoy-check-demo:latest 0.0s done
+#11 DONE 0.3s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image vk-p2-dubovoy-check-demo Built 
+ Container vk-p2-dubovoy-check-ingest-1 Waiting 
+ Container vk-p2-dubovoy-check-ingest-1 Healthy 
+ Container vk-p2-dubovoy-check-demo-run-d2c2764db711 Creating 
+ Container vk-p2-dubovoy-check-demo-run-d2c2764db711 Created 
+PASS invalid JSON: NaN returns 400, NUL returns 422, neither enters the journal
+PASS boundary date: year 1 quarantined and the stream drained
+{
+  "raw_events": 10,
+  "events": 6,
+  "quarantine": 3,
+  "pending": 0,
+  "late": 2,
+  "watermark": "2026-11-24 12:03:00+00:00",
+  "minute_metrics": [
+    [
+      "2026-11-23 12:00:00+00:00",
+      "sensor-01",
+      1,
+      50
+    ],
+    [
+      "2026-11-24 12:00:00+00:00",
+      "sensor-01",
+      2,
+      50
+    ],
+    [
+      "2026-11-24 12:01:00+00:00",
+      "sensor-01",
+      1,
+      20
+    ],
+    [
+      "2026-11-24 12:04:00+00:00",
+      "sensor-01",
+      1,
+      60
+    ],
+    [
+      "2026-11-24 12:05:00+00:00",
+      "sensor-01",
+      1,
+      30
+    ]
+  ],
+  "daily_metrics": [
+    [
+      "2026-11-23",
+      "sensor-01",
+      1,
+      50
+    ],
+    [
+      "2026-11-24",
+      "sensor-01",
+      5,
+      160
+    ]
+  ]
+}
+PASS initial: duplicates, disorder, late, conflict, invalid, UTC daily grouping
+{
+  "raw_events": 19,
+  "events": 6,
+  "quarantine": 5,
+  "pending": 0,
+  "late": 2,
+  "watermark": "2026-11-24 12:03:00+00:00",
+  "minute_metrics": [
+    [
+      "2026-11-23 12:00:00+00:00",
+      "sensor-01",
+      1,
+      50
+    ],
+    [
+      "2026-11-24 12:00:00+00:00",
+      "sensor-01",
+      2,
+      50
+    ],
+    [
+      "2026-11-24 12:01:00+00:00",
+      "sensor-01",
+      1,
+      20
+    ],
+    [
+      "2026-11-24 12:04:00+00:00",
+      "sensor-01",
+      1,
+      60
+    ],
+    [
+      "2026-11-24 12:05:00+00:00",
+      "sensor-01",
+      1,
+      30
+    ]
+  ],
+  "daily_metrics": [
+    [
+      "2026-11-23",
+      "sensor-01",
+      1,
+      50
+    ],
+    [
+      "2026-11-24",
+      "sensor-01",
+      5,
+      160
+    ]
+  ]
+}
+PASS full input replay: aggregates unchanged
+{
+  "raw_events": 20,
+  "events": 7,
+  "quarantine": 5,
+  "pending": 0,
+  "late": 3,
+  "watermark": "2026-11-24 12:03:00+00:00",
+  "minute_metrics": [
+    [
+      "2026-11-23 12:00:00+00:00",
+      "sensor-01",
+      2,
+      120
+    ],
+    [
+      "2026-11-24 12:00:00+00:00",
+      "sensor-01",
+      2,
+      50
+    ],
+    [
+      "2026-11-24 12:01:00+00:00",
+      "sensor-01",
+      1,
+      20
+    ],
+    [
+      "2026-11-24 12:04:00+00:00",
+      "sensor-01",
+      1,
+      60
+    ],
+    [
+      "2026-11-24 12:05:00+00:00",
+      "sensor-01",
+      1,
+      30
+    ]
+  ],
+  "daily_metrics": [
+    [
+      "2026-11-23",
+      "sensor-01",
+      2,
+      120
+    ],
+    [
+      "2026-11-24",
+      "sensor-01",
+      5,
+      160
+    ]
+  ]
+}
+PASS automatic batch: /metrics shows the correction for the older UTC day
+BATCH committed
+{
+  "raw_events": 20,
+  "events": 7,
+  "quarantine": 5,
+  "pending": 0,
+  "late": 3,
+  "watermark": "2026-11-24 12:03:00+00:00",
+  "minute_metrics": [
+    [
+      "2026-11-23 12:00:00+00:00",
+      "sensor-01",
+      2,
+      120
+    ],
+    [
+      "2026-11-24 12:00:00+00:00",
+      "sensor-01",
+      2,
+      50
+    ],
+    [
+      "2026-11-24 12:01:00+00:00",
+      "sensor-01",
+      1,
+      20
+    ],
+    [
+      "2026-11-24 12:04:00+00:00",
+      "sensor-01",
+      1,
+      60
+    ],
+    [
+      "2026-11-24 12:05:00+00:00",
+      "sensor-01",
+      1,
+      30
+    ]
+  ],
+  "daily_metrics": [
+    [
+      "2026-11-23",
+      "sensor-01",
+      2,
+      120
+    ],
+    [
+      "2026-11-24",
+      "sensor-01",
+      5,
+      160
+    ]
+  ]
+}
+PASS repeated batch: aggregates unchanged
+ Container vk-p2-dubovoy-check-stream-1 Stopping 
+ Container vk-p2-dubovoy-check-stream-1 Stopped 
+{'arrival_id': 21}
+ Container vk-p2-dubovoy-check-stream-run-ca0c5d0ec0fe Creating 
+ Container vk-p2-dubovoy-check-stream-run-ca0c5d0ec0fe Created 
+FAULT INJECTION: exiting before COMMIT
+
+PASS rollback: input remains pending, canonical insert rolled back
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-stream-1 Starting 
+ Container vk-p2-dubovoy-check-stream-1 Started 
+BATCH committed
+{
+  "raw_events": 21,
+  "events": 8,
+  "quarantine": 5,
+  "pending": 0,
+  "late": 3,
+  "watermark": "2026-11-24 12:04:00+00:00",
+  "minute_metrics": [
+    [
+      "2026-11-23 12:00:00+00:00",
+      "sensor-01",
+      2,
+      120
+    ],
+    [
+      "2026-11-24 12:00:00+00:00",
+      "sensor-01",
+      2,
+      50
+    ],
+    [
+      "2026-11-24 12:01:00+00:00",
+      "sensor-01",
+      1,
+      20
+    ],
+    [
+      "2026-11-24 12:04:00+00:00",
+      "sensor-01",
+      1,
+      60
+    ],
+    [
+      "2026-11-24 12:05:00+00:00",
+      "sensor-01",
+      1,
+      30
+    ],
+    [
+      "2026-11-24 12:06:00+00:00",
+      "sensor-01",
+      1,
+      80
+    ]
+  ],
+  "daily_metrics": [
+    [
+      "2026-11-23",
+      "sensor-01",
+      2,
+      120
+    ],
+    [
+      "2026-11-24",
+      "sensor-01",
+      6,
+      240
+    ]
+  ]
+}
+PASS crash recovery: one new event, one aggregate increment
+{
+  "raw_events": 21,
+  "events": 8,
+  "quarantine": 5,
+  "pending": 0,
+  "late": 3,
+  "watermark": "2026-11-24 12:04:00+00:00",
+  "minute_metrics": [
+    [
+      "2026-11-23 12:00:00+00:00",
+      "sensor-01",
+      2,
+      120
+    ],
+    [
+      "2026-11-24 12:00:00+00:00",
+      "sensor-01",
+      2,
+      50
+    ],
+    [
+      "2026-11-24 12:01:00+00:00",
+      "sensor-01",
+      1,
+      20
+    ],
+    [
+      "2026-11-24 12:04:00+00:00",
+      "sensor-01",
+      1,
+      60
+    ],
+    [
+      "2026-11-24 12:05:00+00:00",
+      "sensor-01",
+      1,
+      30
+    ],
+    [
+      "2026-11-24 12:06:00+00:00",
+      "sensor-01",
+      1,
+      80
+    ]
+  ],
+  "daily_metrics": [
+    [
+      "2026-11-23",
+      "sensor-01",
+      2,
+      120
+    ],
+    [
+      "2026-11-24",
+      "sensor-01",
+      6,
+      240
+    ]
+  ]
+}

@@ -1,0 +1,125 @@
+ Image vk-p2-dubovoy-check-ingest Building 
+ Image vk-p2-dubovoy-check-stream Building 
+ Image vk-p2-dubovoy-check-batch Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.91kB 0.0s done
+#1 DONE 0.0s
+
+#2 [batch internal] load build definition from Dockerfile
+#2 transferring dockerfile: 243B done
+#2 DONE 0.1s
+
+#3 [batch internal] load metadata for docker.io/library/python:3.11.10-slim
+#3 DONE 1.7s
+
+#4 [stream internal] load .dockerignore
+#4 transferring context: 79B done
+#4 DONE 0.0s
+
+#5 [batch internal] load build context
+#5 transferring context: 12.88kB 0.0s done
+#5 DONE 0.1s
+
+#6 [batch 1/5] FROM docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e
+#6 resolve docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e 0.1s done
+#6 DONE 0.1s
+
+#6 [ingest 1/5] FROM docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e
+#6 resolve docker.io/library/python:3.11.10-slim@sha256:840e180ebcc6e5c8efab209c43f5e40fd2af98cb49db5c7103c90539c56bb30e 0.1s done
+#6 DONE 0.1s
+
+#7 [ingest 3/5] COPY requirements.txt .
+#7 CACHED
+
+#8 [ingest 2/5] WORKDIR /app
+#8 CACHED
+
+#9 [ingest 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [stream 5/5] COPY app.py schema.sql ./
+#10 DONE 0.1s
+
+#11 [stream] exporting to image
+#11 exporting layers
+#11 exporting layers 0.2s done
+#11 exporting manifest sha256:b525c21ee1a638945229f0eea2ac34166c175c5f288e5a1c8f4eaca797d4c03c 0.2s done
+#11 exporting config sha256:4da4a41cc8df860a7bcaa2fdd2e50dd2e0e723181b00af6364ee03235e9dd856
+#11 exporting config sha256:4da4a41cc8df860a7bcaa2fdd2e50dd2e0e723181b00af6364ee03235e9dd856 0.6s done
+#11 exporting attestation manifest sha256:5145d09bfe62df2a46cc4702fe65fcf906ffb60cb1bab40915410c890936aa7a
+#11 exporting attestation manifest sha256:5145d09bfe62df2a46cc4702fe65fcf906ffb60cb1bab40915410c890936aa7a 0.5s done
+#11 exporting manifest list sha256:2cd97de55d1f46b6456b22f7d38c7a7ecb9190c91512ca21e77dc42df438ff17
+#11 exporting manifest list sha256:2cd97de55d1f46b6456b22f7d38c7a7ecb9190c91512ca21e77dc42df438ff17 0.1s done
+#11 naming to docker.io/library/vk-p2-dubovoy-check-stream:latest 0.0s done
+#11 unpacking to docker.io/library/vk-p2-dubovoy-check-stream:latest
+#11 unpacking to docker.io/library/vk-p2-dubovoy-check-stream:latest 0.1s done
+#11 DONE 2.3s
+
+#12 [ingest] exporting to image
+#12 exporting layers 0.2s done
+#12 exporting manifest sha256:6bce4f8bb55732b4555bdd7c8b4f374bc76e2d88ce5e16e21165b1ef6841224a 0.2s done
+#12 exporting config sha256:23660232478aad8fa8751881fa23fda0cfa4e3b11cdc536fcf0ef8d4ec8307ff 0.4s done
+#12 exporting attestation manifest sha256:3a896951d7cbf69b2424567c716c1931843adbafdf189a1290cd7e81b63ebe05 0.6s done
+#12 exporting manifest list sha256:7604bb5e0be3884e64911289eb559ecde065e2802aa624ceee42eacca0aa3213 0.1s done
+#12 naming to docker.io/library/vk-p2-dubovoy-check-ingest:latest 0.1s done
+#12 unpacking to docker.io/library/vk-p2-dubovoy-check-ingest:latest 0.1s done
+#12 DONE 2.3s
+
+#13 [batch] exporting to image
+#13 exporting layers 0.2s done
+#13 exporting manifest sha256:c20f58a6ebff523259e10b5de60a9f0b6ebe9f0e4bee6991d93cca49b6984ec9 0.3s done
+#13 exporting config sha256:6f1346322878b27ce6c4ccea19530f4f91ced0c5fbecad5f690839b4383e7c01 0.6s done
+#13 exporting attestation manifest sha256:f105a812a2f12a488aa51e2b947f59b1cf1ce807197d93b75d3783be43251981 0.3s done
+#13 exporting manifest list sha256:be774d21370befc209408e621c8d735f6a8254a2d70eb479465e13e6b588086a 0.1s done
+#13 naming to docker.io/library/vk-p2-dubovoy-check-batch:latest 0.0s done
+#13 unpacking to docker.io/library/vk-p2-dubovoy-check-batch:latest 0.1s done
+#13 DONE 2.3s
+
+#14 [ingest] resolving provenance for metadata file
+#14 ...
+
+#15 [stream] resolving provenance for metadata file
+#15 DONE 0.5s
+
+#14 [ingest] resolving provenance for metadata file
+#14 DONE 0.5s
+
+#16 [batch] resolving provenance for metadata file
+#16 DONE 0.0s
+ Image vk-p2-dubovoy-check-batch Built 
+ Image vk-p2-dubovoy-check-ingest Built 
+ Image vk-p2-dubovoy-check-stream Built 
+ Network vk-p2-dubovoy-check_default Creating 
+ Network vk-p2-dubovoy-check_default Created 
+ Volume vk-p2-dubovoy-check_pgdata Creating 
+ Volume vk-p2-dubovoy-check_pgdata Created 
+ Container vk-p2-dubovoy-check-postgres-1 Creating 
+ Container vk-p2-dubovoy-check-postgres-1 Created 
+ Container vk-p2-dubovoy-check-stream-1 Creating 
+ Container vk-p2-dubovoy-check-ingest-1 Creating 
+ Container vk-p2-dubovoy-check-batch-1 Creating 
+ Container vk-p2-dubovoy-check-stream-1 Created 
+ Container vk-p2-dubovoy-check-batch-1 Created 
+ Container vk-p2-dubovoy-check-ingest-1 Created 
+ Container vk-p2-dubovoy-check-postgres-1 Starting 
+ Container vk-p2-dubovoy-check-postgres-1 Started 
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-stream-1 Starting 
+ Container vk-p2-dubovoy-check-batch-1 Starting 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-ingest-1 Starting 
+ Container vk-p2-dubovoy-check-batch-1 Started 
+ Container vk-p2-dubovoy-check-stream-1 Started 
+ Container vk-p2-dubovoy-check-ingest-1 Started 
+ Container vk-p2-dubovoy-check-stream-1 Waiting 
+ Container vk-p2-dubovoy-check-batch-1 Waiting 
+ Container vk-p2-dubovoy-check-postgres-1 Waiting 
+ Container vk-p2-dubovoy-check-ingest-1 Waiting 
+ Container vk-p2-dubovoy-check-batch-1 Healthy 
+ Container vk-p2-dubovoy-check-stream-1 Healthy 
+ Container vk-p2-dubovoy-check-postgres-1 Healthy 
+ Container vk-p2-dubovoy-check-ingest-1 Healthy 

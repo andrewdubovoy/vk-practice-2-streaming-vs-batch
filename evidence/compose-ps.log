@@ -1,0 +1,5 @@
+NAME                             IMAGE                        COMMAND                  SERVICE    CREATED              STATUS                        PORTS
+vk-p2-dubovoy-check-batch-1      vk-p2-dubovoy-check-batch    "python app.py batch…"   batch      41 seconds ago       Up 37 seconds                 
+vk-p2-dubovoy-check-ingest-1     vk-p2-dubovoy-check-ingest   "python app.py serve"    ingest     31 seconds ago       Up 28 seconds (healthy)       127.0.0.1:18083->8080/tcp
+vk-p2-dubovoy-check-postgres-1   postgres:16.6-alpine         "docker-entrypoint.s…"   postgres   About a minute ago   Up About a minute (healthy)   5432/tcp
+vk-p2-dubovoy-check-stream-1     vk-p2-dubovoy-check-stream   "python app.py stream"   stream     41 seconds ago       Up 1 second                   

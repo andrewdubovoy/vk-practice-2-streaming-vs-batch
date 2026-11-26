@@ -1,0 +1,51 @@
+name: vk-p2-dubovoy
+x-app: &app
+  build: .
+  environment:
+    DATABASE_URL: postgresql://practice:practice@postgres:5432/telemetry
+    INGEST_URL: http://ingest:8080
+  depends_on:
+    postgres:
+      condition: service_healthy
+services:
+  postgres:
+    image: postgres:16.6-alpine
+    environment:
+      POSTGRES_USER: practice
+      POSTGRES_PASSWORD: practice
+      POSTGRES_DB: telemetry
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/001-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U practice -d telemetry"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  ingest:
+    <<: *app
+    command: ["python", "app.py", "serve"]
+    ports:
+      - "127.0.0.1:${VK_P2_PORT:-18082}:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  stream:
+    <<: *app
+    command: ["python", "app.py", "stream"]
+    restart: unless-stopped
+  batch:
+    <<: *app
+    command: ["python", "app.py", "batch-loop"]
+    restart: unless-stopped
+  demo:
+    <<: *app
+    profiles: ["tools"]
+    command: ["python", "app.py", "verify"]
+    depends_on:
+      ingest:
+        condition: service_healthy
+volumes:
+  pgdata:
